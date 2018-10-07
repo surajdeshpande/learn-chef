@@ -26,15 +26,6 @@ execute 'apt-get update' do
   action :nothing
 end
 
-# Issue - https://stackoverflow.com/questions/45591869/cant-upgrade-jenkins-for-java-version-error
-package 'openjdk-7-jre-headless' do
-  action :remove
-end
-
-package 'jenkins' do
-  action :remove
-end
-
 # Dependency
 package 'openjdk-8-jre-headless'
 
